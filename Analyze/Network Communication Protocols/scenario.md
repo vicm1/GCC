@@ -11,7 +11,7 @@ To load the webpage, your browser sends a query to a DNS server via the UDP prot
 Your browser then uses this IP address as the destination IP for sending an HTTPS request to the web server to display the webpage  The analyzer shows that when you send UDP
 packets to the DNS server, you receive ICMP packets containing the error message: “udp port 53 unreachable.”
 
-![images](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/LKXsnNIhT0e1mAz5AEvxog_d363c94e0a4f4a8b90b0be403f6ee1f1_mMBaLWLyXG2omYBcSdjuR8y5_S59zow1ZEPYdjNyJzA1B0r55nI9KmDosI8QHXcEwE51NxM3N5gNtMgSOyVDHyJVLZvZA7_jJtkzUKfxuqFUJPHs57vVVES-LbG5teR8eir4idaqsxFaYJhhVJZn-a_S-txb7zQNIZq07XESgSkqDHuzfvALfYk3lipGVBY?expiry=1723852800000&hmac=v_ILgTebxk1EbZgN_ItWDw_TzYqiA_H1difvjRM6Law)
+![images](https://github.com/vicm1/GCC/blob/main/Analyze/Network%20Communication%20Protocols/image.png)
 
 In the tcpdump log, you find the following information:
 
