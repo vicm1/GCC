@@ -16,5 +16,5 @@ Task 3. Search more file contents
 - ls /home/analyst/reports/users | grep jhill Q2_deleted_users.txt
 3. Search the Q4_added_users.txt file to list the users who were added to the Human Resources department.
 - ls /home/analyst/reports/users | grep "Human Resources" Q4_added_users.txt
-How many users were added to the Human Resources department in quarter 4?
+4. How many users were added to the Human Resources department in quarter 4?
 - 2
