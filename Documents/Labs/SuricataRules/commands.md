@@ -1,100 +1,61 @@
-Task 1. Retrieve employee device data
-In this task, you need to obtain information on employee devices because your team needs to update them. The information you need is in the machines table in the organization database.
+Task 1. Examine a custom rule in Suricata
+The /home/analyst directory contains a custom.rules file that defines the network traffic rules, which Suricata captures.
 
-First, you need to retrieve all the information about the employee devices.
+In this task, you’ll explore the composition of the Suricata rule defined in the custom.rules file.
 
-1. Run the following query to select all device information from the machines table:
-- SELECT *
-FROM machines;
- - ouput:
- +--------------+------------------+----------------+---------------+-------------+
-| device_id    | operating_system | email_client   | OS_patch_date | employee_id |
-+--------------+------------------+----------------+---------------+-------------+
-| a184b775c707 | OS 1             | Email Client 1 | 2021-09-01    |        1156 |
-| a192b174c940 | OS 2             | Email Client 1 | 2021-06-01    |        1052 |
-| a305b818c708 | OS 3             | Email Client 2 | 2021-06-01    |        1182 |
-| a317b635c465 | OS 1             | Email Client 2 | 2021-03-01    |        1130 |
-| a320b137c219 | OS 2             | Email Client 2 | 2021-03-01    |        1000 |
-|...           |                  |                |               |             |
-+--------------+------------------+----------------+---------------+-------------+
-200 rows in set (0.356 sec)
+Use the cat command to display the rule in the custom.rules file:
+- cat custom.rules
 
-2. Run the following query to select only the device_id and email_client columns from the machines table. Replace X with device_id and Y with email_client:
-- SELECT device_id, email_client
-FROM machines;
-- What email client is returned in the third row?
-- Email Client 2
+Task 2. Trigger a custom rule in Suricata
+Now that you are familiar with the composition of the custom Suricata rule, you must trigger this rule and examine the alert logs that Suricata generates.
 
-3. Now, you need information on the operating systems used on various devices and their last patch date.
-Complete the query to return only the device_id, operating_system, and OS_patch_date columns from the machines table. Replace X, Y, and Z with the columns that you need to return:
-- SELECT device_id, operating_system, OS_patch_date
-FROM machines;
-- output:
-+--------------+------------------+---------------+
-| device_id    | operating_system | OS_patch_date |
-+--------------+------------------+---------------+
-| a184b775c707 | OS 1             | 2021-09-01    |
-| a192b174c940 | OS 2             | 2021-06-01    |
-| a305b818c708 | OS 3             | 2021-06-01    |
-| a317b635c465 | OS 1             | 2021-03-01    |
-| a320b137c219 | OS 2             | 2021-03-01    |
-
-Task 2. Investigate login activity
-In this task, you need to analyze the information from the log_in_attempts table to determine if any unusual activity has occurred.
-
-First, you need to investigate the locations where login attempts were made to ensure that they’re in expected areas (the United States, Canada, or Mexico).
-
-1. Write a SQL query to select the event_id and country columns from the log_in_attempts table.
-- SELECT event_id, country
-FROM log_in_attempts;
-
-Were any login attempts made from Australia?
-- no
-
-Next, you need to check if login attempts were made outside of the organization's working hours.
-2. Write a SQL query that selects the username, login_date, and login_time columns from the log_in_attempts table.
-- SELECT username, login_date, login_time
-FROM log_in_attempts;
-
-What username is returned in the fifth row?
-- jrafael
-
-+----------+------------+------------+
-| username | login_date | login_time |
-+----------+------------+------------+
-| jrafael  | 2022-05-09 | 04:56:27   |
-| apatel   | 2022-05-10 | 20:27:27   |
-| dkot     | 2022-05-09 | 06:47:41   |
-| dkot     | 2022-05-08 | 02:00:39   |
-| jrafael  | 2022-05-11 | 03:05:59   |
-| arutley  | 2022-05-12 | 17:00:59   |
-| eraab    | 2022-05-11 | 01:45:14   |
-
-Now, you need to get a complete picture of all login attempts.
-3. Write a SQL query that selects all columns from the log_in_attempts table, using a single symbol after the SELECT keyword.
-- SELECT *
-FROM log_in_attempts;
+1. List the files in the /var/log/suricata folder:
+- ls -l /var/log/suricata
 
 
-Task 3. Order login attempts data
-In this task, you need to use the ORDER BY keyword. You'll sequence the data that your query returns according to the login date and time.
+2. Run suricata using the custom.rules and sample.pcap files:
+- sudo suricata -r sample.pcap -S custom.rules -k none
 
-First, you need to sort the information by date.
+This command starts the Suricata application and processes the sample.pcap file using the rules in the custom.rules file. It returns an output stating how many packets were processed by Suricata.
 
-1. Run the following query, which orders log_in_attempts data by login_date:
-- SELECT *
-FROM log_in_attempts
-ORDER BY login_date;
+Now you’ll further examine the options in the command:
 
-What are the username and login date of the first record returned?
-- Ivelasco on 2022-05-08
+The -r sample.pcap option specifies an input file to mimic network traffic. In this case, the sample.pcap file.
+The -S custom.rules option instructs Suricata to use the rules defined in the custom.rules file.
+The -k none option instructs Suricata to disable all checksum checks.
+As a refresher, checksums are a way to detect if a packet has been modified in transit. Because you are using network traffic from a sample packet capture file, you won't need Suricata to check the integrity of the checksum.
 
-Now, you need to further organize the previous results by ordering them by login_time.
+Suricata adds a new alert line to the /var/log/suricata/fast.log file when all the conditions in any of the rules are met.
 
-2. Modify the query from the previous step by adding the login time to the ORDER BY clause. You must replace X with the appropriate column name:
-- SELECT *
-FROM log_in_attempts
-ORDER BY login_date, login_time;
+3. List the files in the /var/log/suricata folder again:
+- ls -l /var/log/suricata
 
-What are the username and login time of the first record returned by the above query?
-- bsand at 00:19:11
+4. Use the cat command to display the fast.log file generated by Suricata:
+- cat fast.log
+
+Each line or entry in the fast.log file corresponds to an alert generated by Suricata when it processes a packet that meets the conditions of an alert generating rule. Each alert line includes the message that identifies the rule that triggered the alert, as well as the source, destination, and direction of the traffic.
+
+Task 3. Examine eve.json output
+In this task, you must examine the additional output that Suricata generates in the eve.json file.
+
+As previously mentioned, this file is located in the /var/log/suricata/ directory.
+
+The eve.json file is the standard and main Suricata log file and contains a lot more data than the fast.log file. This data is stored in a JSON format, which makes it much more useful for analysis and processing by other applications.
+
+1. Use the cat command to display the entries in the eve.json file:
+- cat /var/log/suricata/eve.json
+
+2. Use the jq command to display the entries in an improved format:
+- jq . /var/log/suricata/eve.json | less
+
+3. What is the value of the severity property for the first alert returned by the jq command?
+- 3
+
+4. Use the jq command to extract specific event data from the eve.json file:
+- jq -c "[.timestamp,.flow_id,.alert.signature,.proto,.dest_ip]" /var/log/suricata/eve.json
+
+5. What is the destination IP address listed for the last event in the 'eve.json' file?
+- 142.250.1.102
+
+6. What is the alert signature for the first alert entry in the 'eve.json' file?
+- GET on wire
