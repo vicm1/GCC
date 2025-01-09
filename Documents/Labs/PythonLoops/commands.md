@@ -97,12 +97,12 @@ You are now given a list of IP addresses that are allowed to log in, stored in a
 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `allow_list` to a list of IP addresses that are allowed to log in
+"# Assign `allow_list` to a list of IP addresses that are allowed to log in
 ​
 allow_list = ["192.168.243.140", "192.168.205.12", "192.168.151.162", "192.168.178.71",
               "192.168.86.232", "192.168.3.24", "192.168.170.243", "192.168.119.173"]
 ​
-# Assign `ip_addresses` to a list of IP addresses from which users have tried to log in
+"# Assign `ip_addresses` to a list of IP addresses from which users have tried to log in
 ​
 ip_addresses = ["192.168.142.245", "192.168.109.50", "192.168.86.232", "192.168.131.147",
                 "192.168.205.12", "192.168.200.48"]
