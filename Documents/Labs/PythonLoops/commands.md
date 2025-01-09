@@ -3,8 +3,8 @@ In this task, you'll create a loop related to connecting to a network.
 
 Write an iterative statement that displays Connection could not be established three times. Use the for keyword, the range() function, and a loop variable of i. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Iterative statement using `for`, `range()`, and a loop variable of `i`
-# Display "Connection could not be established." three times
+"# Iterative statement using `for`, `range()`, and a loop variable of `i`
+"# Display "Connection could not be established." three times
 ​
 for i in range(3):
     print("Connection could not be established.")
@@ -18,21 +18,21 @@ The range() function can also take in a variable. To repeat a specified action a
 
 In your code that displays a network message connection, incorporate a variable called connection_attempts. Assign the positive integer of your choice as the value of that variable and fill in the missing variable in the iterative statement. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell. Test out the code with different values for connection_attempts and observe what happens.
 
-# Create a variable called `connection_attempts` that stores the number of times the user has tried to connect to the network
+"# Create a variable called `connection_attempts` that stores the number of times the user has tried to connect to the network
 
 connection_attempts = 3
 
-# Iterative statement using `for`, `range()`, a loop variable of `i`, and `connection_attempts`
-# Display "Connection could not be established." as many times as specified by `connection_attempts`
+"# Iterative statement using `for`, `range()`, a loop variable of `i`, and `connection_attempts`
+"# Display "Connection could not be established." as many times as specified by `connection_attempts`
 
 for i in range(connection_attempts):
     print("Connection could not be established")
-# Create a variable called `connection_attempts` that stores the number of times the user has tried to connect to the network
+"# Create a variable called `connection_attempts` that stores the number of times the user has tried to connect to the network
 ​
 connection_attempts = 3
 ​
-# Iterative statement using `for`, `range()`, a loop variable of `i`, and `connection_attempts`
-# Display "Connection could not be established." as many times as specified by `connection_attempts`
+"# Iterative statement using `for`, `range()`, a loop variable of `i`, and `connection_attempts`
+"# Display "Connection could not be established." as many times as specified by `connection_attempts`
 ​
 for i in range(connection_attempts):
     print("Connection could not be established")
@@ -47,24 +47,24 @@ In this task, a for loop and a while loop will produce similar results, but each
 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `connection_attempts` to an initial value of 0, to keep track of how many times the user has tried to connect to the network
+"# Assign `connection_attempts` to an initial value of 0, to keep track of how many times the user has tried to connect to the network
 
 connection_attempts = 0
 
-# Iterative statement using `while` and `connection_attempts`
-# Display "Connection could not be established." every iteration, until connection_attempts reaches a specified number
+"# Iterative statement using `while` and `connection_attempts`
+"# Display "Connection could not be established." every iteration, until connection_attempts reaches a specified number
 
 while connection_attempts < 3:
     print("Connection could not be established.")
     # Update `connection_attempts` (increment it by 1 at the end of each iteration)
     connection_attempts = connection_attempts + 1
 
-# Assign `connection_attempts` to an initial value of 0, to keep track of how many times the user has tried to connect to the network
+"# Assign `connection_attempts` to an initial value of 0, to keep track of how many times the user has tried to connect to the network
 ​
 connection_attempts = 0
 ​
-# Iterative statement using `while` and `connection_attempts`
-# Display "Connection could not be established." every iteration, until connection_attempts reaches a specified number
+"# Iterative statement using `while` and `connection_attempts`
+"# Display "Connection could not be established." every iteration, until connection_attempts reaches a specified number
 ​
 while connection_attempts < 3:
     print("Connection could not be established.")
@@ -82,12 +82,12 @@ Now, you'll move onto your next task. You'll automate checking whether IP addres
 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `ip_addresses` to a list of IP addresses from which users have tried to log in
+"# Assign `ip_addresses` to a list of IP addresses from which users have tried to log in
 ​
 ip_addresses = ["192.168.142.245", "192.168.109.50", "192.168.86.232", "192.168.131.147",
                 "192.168.205.12", "192.168.200.48"]
 ​
-# For loop that displays the elements of `ip_addresses` one at a time
+"# For loop that displays the elements of `ip_addresses` one at a time
 ​
 for i in ip_addresses:
 print(i)
@@ -107,9 +107,9 @@ allow_list = ["192.168.243.140", "192.168.205.12", "192.168.151.162", "192.168.1
 ip_addresses = ["192.168.142.245", "192.168.109.50", "192.168.86.232", "192.168.131.147",
                 "192.168.205.12", "192.168.200.48"]
 ​
-# For each IP address in the list of IP addresses from which users have tried to log in,
-# If it is among the allowed addresses, then display “IP address is allowed”
-# Otherwise, display “IP address is not allowed”
+"# For each IP address in the list of IP addresses from which users have tried to log in,
+"# If it is among the allowed addresses, then display “IP address is allowed”
+"# Otherwise, display “IP address is not allowed”
 ​
 for i in ip_addresses:
     if i in allow_list:
@@ -122,19 +122,19 @@ Imagine now that the information the users are trying to access is restricted, a
 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `allow_list` to a list of IP addresses that are allowed to log in
+"# Assign `allow_list` to a list of IP addresses that are allowed to log in
 ​
 allow_list = ["192.168.243.140", "192.168.205.12", "192.168.151.162", "192.168.178.71",
               "192.168.86.232", "192.168.3.24", "192.168.170.243", "192.168.119.173"]
 ​
-# Assign `ip_addresses` to a list of IP addresses from which users have tried to log in
+"# Assign `ip_addresses` to a list of IP addresses from which users have tried to log in
 ​
 ip_addresses = ["192.168.142.245", "192.168.109.50", "192.168.86.232", "192.168.131.147",
                 "192.168.205.12", "192.168.200.48"]
 ​
-# For each IP address in the list of IP addresses from which users have tried to log in,
-# If it is among the allowed addresses, then display “IP address is allowed”
-# Otherwise, display “IP address is not allowed”
+"# For each IP address in the list of IP addresses from which users have tried to log in,
+"# If it is among the allowed addresses, then display “IP address is allowed”
+"# Otherwise, display “IP address is not allowed”
 
 for i in ip_addresses:
     if i in allowed_list:
@@ -152,12 +152,12 @@ Write a while loop that generates unique employee IDs for the Sales department b
 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign the loop variable `i` to an initial value of 5000
+"# Assign the loop variable `i` to an initial value of 5000
 ​
 i = 5000
 ​
-# While loop that generates unique employee IDs for the Sales department by iterating through numbers
-# and displays each ID created
+"# While loop that generates unique employee IDs for the Sales department by iterating through numbers
+"# and displays each ID created
 ​
 while i <= 5150:
     print(i)
@@ -170,13 +170,13 @@ To do so, include an if statement in your code.
 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign the loop variable `i` to an initial value of 5000
+"# Assign the loop variable `i` to an initial value of 5000
 ​
 i = 5000
 ​
-# While loop that generates unique employee IDs for the Sales department by iterating through numbers
-# and displays each ID created
-# This loop displays "Only 10 valid employee ids remaining" once `i` reaches 5100
+"# While loop that generates unique employee IDs for the Sales department by iterating through numbers
+"# and displays each ID created
+"# This loop displays "Only 10 valid employee ids remaining" once `i` reaches 5100
 ​
 while i <= 5150:
     print(i)
