@@ -5,12 +5,12 @@ In Python, a with statement is often used in file handling to open a file and th
 
 You're given a variable named import_file that contains the name of the log file that you want to import. Start by writing the first line of the with statement in the following code cell. Use the open() function, setting the second parameter to "r". Note that running this code will produce an error because it will only contain the first line of the with statement; you'll complete this with statement in the task after this. Be sure to replace the ### YOUR CODE HERE ### with your own code.
 
-# Assign `import_file` to the name of the text file that contains the security log file
+"# Assign `import_file` to the name of the text file that contains the security log file
 ​
 import_file = "login.txt"
 ​
-# First line of the `with` statement
-# Use `open()` to import security log file and store it as a string
+"# First line of the `with` statement
+"# Use `open()` to import security log file and store it as a string
 ​
 with open(import_file, "r") as file:
   File "<ipython-input-6-dd8ccf6ed2a3>", line 8
@@ -22,20 +22,20 @@ Task 2
 Now, you'll use the .read() method to read the imported file, and you'll store the result in a variable named text. Afterwards, display the text and explore what it contains by running the cell. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 text
-# Assign `import_file` to the name of the text file that contains the security log file
+"# Assign `import_file` to the name of the text file that contains the security log file
 ​
 import_file = "login.txt"
 ​
-# The `with` statement
-# Use `open()` to import security log file and store it as a string
+"# The `with` statement
+"# Use `open()` to import security log file and store it as a string
 ​
 with open(import_file, "r") as file:
 ​
-  # Use `.read()` to read the imported file and store the result in a variable named `text`
+"# Use `.read()` to read the imported file and store the result in a variable named `text`
 ​
   text = file.read()
 ​
-# Display the contents of `text`
+"# Display the contents of `text`
 ​
 print(text)
 
@@ -69,20 +69,20 @@ Use the .split() method to perform this split and then display the result. Be su
 
 Note that displaying .split() doesn’t change what is stored in the text variable. Variable reassignment would be necessary if you want to store the result after splitting.
 
-# Assign `import_file` to the name of the text file that contains the security log file
+"# Assign `import_file` to the name of the text file that contains the security log file
 ​
 import_file = "login.txt"
 ​
-# The `with` statement
-# Use `open()` to import security log file and store it as a string
+"# The `with` statement
+"# Use `open()` to import security log file and store it as a string
 ​
 with open(import_file, "r") as file:
 ​
-  # Use `.read()` to read the imported file and store the result in a variable named `text`
+  "# Use `.read()` to read the imported file and store the result in a variable named `text`
 ​
   text = file.read()
 ​
-# Display the contents of `text` split into separate lines
+"# Display the contents of `text` split into separate lines
 ​
 print(text.split())
 
@@ -101,16 +101,16 @@ Use the .write() method and the parameter "a" in the open() function. Be sure to
 After the portion of the code that writes to the file, another with statement uses the .read() method to read the updated file into the text variable and then display it.
 
 missing_entry
-# Assign `import_file` to the name of the text file that contains the security log file
+"# Assign `import_file` to the name of the text file that contains the security log file
 ​
 import_file = "login.txt"
 ​
-# Assign `missing entry` to a log that was not recorded in the log file
+"# Assign `missing entry` to a log that was not recorded in the log file
 ​
 missing_entry = "jrafael,192.168.243.140,4:56:27,2022-05-09"
 ​
-# Use `open()` to import security log file and store it as a string
-# Pass in "a" as the second parameter to indicate that the file is being opened for appending purposes
+"# Use `open()` to import security log file and store it as a string
+"# Pass in "a" as the second parameter to indicate that the file is being opened for appending purposes
 ​
 with open(import_file, "a") as file:
 ​
@@ -118,7 +118,7 @@ with open(import_file, "a") as file:
 ​
     text = file.write(missing_entry)
 ​
-# Use `open()` with the parameter "r" to open the security log file for reading purposes
+"# Use `open()` with the parameter "r" to open the security log file for reading purposes
 ​
 with open(import_file, "r") as file:
 ​
@@ -126,7 +126,7 @@ with open(import_file, "r") as file:
 ​
     text = file.read()
 ​
-# Display the contents of `text`
+"# Display the contents of `text`
 ​
 print(text)
 
@@ -168,19 +168,19 @@ You're also given a variable named ip_addresses that stores a string containing 
 Run the code to display the two variables and explore what they contain. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 allow_list.txt
-# Assign `import_file` to the name of the text file that you want to create
+"# Assign `import_file` to the name of the text file that you want to create
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `ip_addresses` to a list of IP addresses that are allowed to access the restricted information
+"# Assign `ip_addresses` to a list of IP addresses that are allowed to access the restricted information
 ​
 ip_addresses = "192.168.218.160 192.168.97.225 192.168.145.158 192.168.108.13 192.168.60.153 192.168.96.200 192.168.247.153 192.168.3.252 192.168.116.187 192.168.15.110 192.168.39.246"
 ​
-# Display `import_file`
+"# Display `import_file`
 ​
 print(import_file)
 ​
-# Display `ip_addresses`
+"# Display `ip_addresses`
 ​
 print(ip_addresses)
 
@@ -192,19 +192,19 @@ Your next goal is to create a with statement in order to write the IP addresses 
 
 You'll first open the file using the "w" parameter. Then, you'll write the IP addresses to the file. Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell. Note that the code cell will contain a with statement that writes to a file but does not display information to the screen, so running it will not produce an output.
 
-# Assign `import_file` to the name of the text file that you want to create
+"# Assign `import_file` to the name of the text file that you want to create
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `ip_addresses` to a list of IP addresses that are allowed to access the restricted information
+"# Assign `ip_addresses` to a list of IP addresses that are allowed to access the restricted information
 ​
 ip_addresses = "192.168.218.160 192.168.97.225 192.168.145.158 192.168.108.13 192.168.60.153 192.168.96.200 192.168.247.153 192.168.3.252 192.168.116.187 192.168.15.110 192.168.39.246"
 ​
-# Create a `with` statement to write to the text file
+"# Create a `with` statement to write to the text file
 ​
 with open (import_file, "w") as file:
 
-  # Write `ip_addresses` to the text file
+  "# Write `ip_addresses` to the text file
 ​
   text = file.write(ip_addresses)
 
@@ -215,15 +215,15 @@ In this final step, you'll complete the code you've been writing up to this poin
 
 Afterwards, display the contents of text and run the cell to explore the result. Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `import_file` to the name of the text file that you want to create
+"# Assign `import_file` to the name of the text file that you want to create
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `ip_addresses` to a list of IP addresses that are allowed to access the restricted information
+"# Assign `ip_addresses` to a list of IP addresses that are allowed to access the restricted information
 ​
 ip_addresses = "192.168.218.160 192.168.97.225 192.168.145.158 192.168.108.13 192.168.60.153 192.168.96.200 192.168.247.153 192.168.3.252 192.168.116.187 192.168.15.110 192.168.39.246"
 ​
-# Create a `with` statement to write to the text file
+"# Create a `with` statement to write to the text file
 ​
 with open(import_file, "w") as file:
 ​
@@ -231,7 +231,7 @@ with open(import_file, "w") as file:
 ​
     file.write(ip_addresses)
 ​
-# Create a `with` statement to read in the text file
+"# Create a `with` statement to read in the text file
 ​
 with open(import_file, "r") as file:
 ​
@@ -239,7 +239,7 @@ with open(import_file, "r") as file:
 ​
     text = file.read()
 ​
-# Display the contents of `text`
+"# Display the contents of `text`
 ​
 - print(text)
 192.168.218.160 192.168.97.225 192.168.145.158 192.168.108.13 192.168.60.153 192.168.96.200 192.168.247.153 192.168.3.252 192.168.116.187 192.168.15.110 192.168.39.246
