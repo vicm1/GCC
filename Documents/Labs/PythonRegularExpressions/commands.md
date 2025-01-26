@@ -1,10 +1,10 @@
 Task 1
 In order to work with regular expressions in Python, start by importing the re module. This module contains many functions that will help you work with regular expressions. By running the following code cell, the module will be available through the rest of the notebook.
 
-# Import the `re` module in Python
+//Import the `re` module in Python
 
 import re
-# Import the `re` module in Python
+//Import the `re` module in Python
 ​
 import re
 Task 2
@@ -12,11 +12,11 @@ Currently, you are looking for device IDs that begin with "r15". These character
 
 You're given a log of device IDs, stored in a variable named devices. Your eventual goal is to extract the device IDs that start with the characters "r15". For now, display the contents of the whole string to examine what it contains. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `devices` to a string containing device IDs, each device ID represented by alphanumeric characters
+//Assign `devices` to a string containing device IDs, each device ID represented by alphanumeric characters
 ​
 devices = "r262c36 67bv8fy 41j1u2e r151dm4 1270t3o 42dr56i r15xk9h 2j33krk 253be78 ac742a1 r15u9q5 zh86b2l ii286fq 9x482kt 6oa6m6u x3463ac i4l56nq g07h55q 081qc9t r159r1u"
 ​
-# Display the contents of `devices`
+//Display the contents of `devices`
 ​
 print(devices)
 r262c36 67bv8fy 41j1u2e r151dm4 1270t3o 42dr56i r15xk9h 2j33krk 253be78 ac742a1 r15u9q5 zh86b2l ii286fq 9x482kt 6oa6m6u x3463ac i4l56nq g07h55q 081qc9t r159r1u
@@ -28,11 +28,11 @@ Use the regular expression symbols \w and + to create the pattern, and store it 
 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell. Note that the code cell will contain only variable assignments, so running it will not produce an output.
 
-# Assign `devices` to a string containing device IDs, each device ID represented by alphanumeric characters
+//Assign `devices` to a string containing device IDs, each device ID represented by alphanumeric characters
 ​
 devices = "r262c36 67bv8fy 41j1u2e r151dm4 1270t3o 42dr56i r15xk9h 2j33krk 253be78 ac742a1 r15u9q5 zh86b2l ii286fq 9x482kt 6oa6m6u x3463ac i4l56nq g07h55q 081qc9t r159r1u"
 ​
-# Assign `target_pattern` to a regular expression pattern for finding device IDs that start with "r15"
+//Assign `target_pattern` to a regular expression pattern for finding device IDs that start with "r15"
 ​
 target_pattern = "r15\w+"
 
@@ -46,15 +46,15 @@ Use the findall() function from the re module to find the device IDs that the ta
 
 Note: In order to use re.findall() in Tasks 4, 7, 8, 9 and 11, you must have previously run the code import re in Task 1.
 
-# Assign `devices` to a string containing device IDs, each device ID represented by alphanumeric characters
+//Assign `devices` to a string containing device IDs, each device ID represented by alphanumeric characters
 ​
 devices = "r262c36 67bv8fy 41j1u2e r151dm4 1270t3o 42dr56i r15xk9h 2j33krk 253be78 ac742a1 r15u9q5 zh86b2l ii286fq 9x482kt 6oa6m6u x3463ac i4l56nq g07h55q 081qc9t r159r1u"
 ​
-# Assign `target_pattern` to a regular expression pattern for finding device IDs that start with "r15"
+//Assign `target_pattern` to a regular expression pattern for finding device IDs that start with "r15"
 ​
 target_pattern = "r15\w+"
 ​
-# Use `re.findall()` to find the device IDs that start with "r15" and display the results
+//Use `re.findall()` to find the device IDs that start with "r15" and display the results
 ​
 print(re.findall(target_pattern, devices))
 
@@ -68,11 +68,11 @@ You're given the log file as a string stored in a variable named log_file. There
 Start by displaying the contents of the log_file to examine the details inside. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 g_file
-# Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
+//Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
 ​
 log_file = "eraab 2022-05-10 6:03:41 192.168.152.148 \niuduike 2022-05-09 6:46:40 192.168.22.115 \nsmartell 2022-05-09 19:30:32 192.168.190.178 \narutley 2022-05-12 17:00:59 1923.1689.3.24 \nrjensen 2022-05-11 0:59:26 192.168.213.128 \naestrada 2022-05-09 19:28:12 1924.1680.27.57 \nasundara 2022-05-11 18:38:07 192.168.96.200 \ndkot 2022-05-12 10:52:00 1921.168.1283.75 \nabernard 2022-05-12 23:38:46 19245.168.2345.49 \ncjackson 2022-05-12 19:36:42 192.168.247.153 \njclark 2022-05-10 10:48:02 192.168.174.117 \nalevitsk 2022-05-08 12:09:10 192.16874.1390.176 \njrafael 2022-05-10 22:40:01 192.168.148.115 \nyappiah 2022-05-12 10:37:22 192.168.103.10654 \ndaquino 2022-05-08 7:02:35 192.168.168.144"
 ​
-# Display contents of `log_file`
+//Display contents of `log_file`
 ​
 print(log_file)
 
@@ -97,11 +97,11 @@ In this task, you'll build a regular expression pattern that you can use later o
 
 Write a regular expression pattern that will match with these IP addresses and store it in a variable named pattern. Use the regular expression symbols \d and \. in your pattern. Note that the symbol \d matches with digits, in other words, any integer between 0 and 9. Be sure to replace the ### YOUR CODE HERE ### with your own code. Since you'll just build the pattern here, there won't be any output when you run this cell.
 
-# Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
+//Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
 ​
 log_file = "eraab 2022-05-10 6:03:41 192.168.152.148 \niuduike 2022-05-09 6:46:40 192.168.22.115 \nsmartell 2022-05-09 19:30:32 192.168.190.178 \narutley 2022-05-12 17:00:59 1923.1689.3.24 \nrjensen 2022-05-11 0:59:26 192.168.213.128 \naestrada 2022-05-09 19:28:12 1924.1680.27.57 \nasundara 2022-05-11 18:38:07 192.168.96.200 \ndkot 2022-05-12 10:52:00 1921.168.1283.75 \nabernard 2022-05-12 23:38:46 19245.168.2345.49 \ncjackson 2022-05-12 19:36:42 192.168.247.153 \njclark 2022-05-10 10:48:02 192.168.174.117 \nalevitsk 2022-05-08 12:09:10 192.16874.1390.176 \njrafael 2022-05-10 22:40:01 192.168.148.115 \nyappiah 2022-05-12 10:37:22 192.168.103.10654 \ndaquino 2022-05-08 7:02:35 192.168.168.144"
 ​
-# Assign `pattern` to a regular expression pattern that will match with IP addresses of the form xxx.xxx.xxx.xxx
+//Assign `pattern` to a regular expression pattern that will match with IP addresses of the form xxx.xxx.xxx.xxx
 ​
 pattern = "\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d"
 
@@ -109,15 +109,15 @@ Task 7
 In this task, you'll use the re.findall() function on the regular expression pattern stored in the pattern variable and the provided log_file to extract the corresponding IP addresses. Afterwards, run the cell and take note of what it outputs. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 \d\d\d\.\d\d\d\.\d\d\d\.\d\d\d
-# Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
+//Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
 ​
 log_file = "eraab 2022-05-10 6:03:41 192.168.152.148 \niuduike 2022-05-09 6:46:40 192.168.22.115 \nsmartell 2022-05-09 19:30:32 192.168.190.178 \narutley 2022-05-12 17:00:59 1923.1689.3.24 \nrjensen 2022-05-11 0:59:26 192.168.213.128 \naestrada 2022-05-09 19:28:12 1924.1680.27.57 \nasundara 2022-05-11 18:38:07 192.168.96.200 \ndkot 2022-05-12 10:52:00 1921.168.1283.75 \nabernard 2022-05-12 23:38:46 19245.168.2345.49 \ncjackson 2022-05-12 19:36:42 192.168.247.153 \njclark 2022-05-10 10:48:02 192.168.174.117 \nalevitsk 2022-05-08 12:09:10 192.16874.1390.176 \njrafael 2022-05-10 22:40:01 192.168.148.115 \nyappiah 2022-05-12 10:37:22 192.168.103.10654 \ndaquino 2022-05-08 7:02:35 192.168.168.144"
 ​
-# Assign `pattern` to a regular expression pattern that will match with IP addresses of the form xxx.xxx.xxx.xxx
+//Assign `pattern` to a regular expression pattern that will match with IP addresses of the form xxx.xxx.xxx.xxx
 ​
 pattern = "\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d"
 ​
-# Use the `re.findall()` function on `pattern` and `log_file` to extract the IP addresses of the form xxx.xxx.xxx.xxx and display the results
+//Use the `re.findall()` function on `pattern` and `log_file` to extract the IP addresses of the form xxx.xxx.xxx.xxx and display the results
 ​
 print(re.findall(pattern, log_file))
 
@@ -133,26 +133,26 @@ There are some valid IP addresses in the log_file that you haven't extracted yet
 
 Adjust the regular expression in the pattern to allow for variation in the number of digits in each segment. You can do this by using the + symbol after the \d symbol. Afterwards, use the updated pattern to extract remaining IP addresses. Then, run the cell to analyze the results. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
+//Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
 
 log_file = "eraab 2022-05-10 6:03:41 192.168.152.148 \niuduike 2022-05-09 6:46:40 192.168.22.115 \nsmartell 2022-05-09 19:30:32 192.168.190.178 \narutley 2022-05-12 17:00:59 1923.1689.3.24 \nrjensen 2022-05-11 0:59:26 192.168.213.128 \naestrada 2022-05-09 19:28:12 1924.1680.27.57 \nasundara 2022-05-11 18:38:07 192.168.96.200 \ndkot 2022-05-12 10:52:00 1921.168.1283.75 \nabernard 2022-05-12 23:38:46 19245.168.2345.49 \ncjackson 2022-05-12 19:36:42 192.168.247.153 \njclark 2022-05-10 10:48:02 192.168.174.117 \nalevitsk 2022-05-08 12:09:10 192.16874.1390.176 \njrafael 2022-05-10 22:40:01 192.168.148.115 \nyappiah 2022-05-12 10:37:22 192.168.103.10654 \ndaquino 2022-05-08 7:02:35 192.168.168.144"
 
-# Update `pattern` to a regular expression pattern that will match with IP addresses with any variation in the number of digits per segment
+//Update `pattern` to a regular expression pattern that will match with IP addresses with any variation in the number of digits per segment
 
 pattern = "\d+\.\d+\.\d+\.\d+"
 
-# Use the `re.findall()` function on `pattern` and `log_file` to extract the IP addresses of the updated form specifed above and display the results
+//Use the `re.findall()` function on `pattern` and `log_file` to extract the IP addresses of the updated form specifed above and display the results
 
 print(re.findall(pattern, log_file))
-# Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
+//Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
 ​
 log_file = "eraab 2022-05-10 6:03:41 192.168.152.148 \niuduike 2022-05-09 6:46:40 192.168.22.115 \nsmartell 2022-05-09 19:30:32 192.168.190.178 \narutley 2022-05-12 17:00:59 1923.1689.3.24 \nrjensen 2022-05-11 0:59:26 192.168.213.128 \naestrada 2022-05-09 19:28:12 1924.1680.27.57 \nasundara 2022-05-11 18:38:07 192.168.96.200 \ndkot 2022-05-12 10:52:00 1921.168.1283.75 \nabernard 2022-05-12 23:38:46 19245.168.2345.49 \ncjackson 2022-05-12 19:36:42 192.168.247.153 \njclark 2022-05-10 10:48:02 192.168.174.117 \nalevitsk 2022-05-08 12:09:10 192.16874.1390.176 \njrafael 2022-05-10 22:40:01 192.168.148.115 \nyappiah 2022-05-12 10:37:22 192.168.103.10654 \ndaquino 2022-05-08 7:02:35 192.168.168.144"
 ​
-# Update `pattern` to a regular expression pattern that will match with IP addresses with any variation in the number of digits per segment
+//Update `pattern` to a regular expression pattern that will match with IP addresses with any variation in the number of digits per segment
 ​
 pattern = "\d+\.\d+\.\d+\.\d+"
-​
-# Use the `re.findall()` function on `pattern` and `log_file` to extract the IP addresses of the updated form specifed above and display the results
+
+//Use the `re.findall()` function on `pattern` and `log_file` to extract the IP addresses of the updated form specifed above and display the results
 ​
 print(re.findall(pattern, log_file))
 
@@ -171,19 +171,19 @@ In this task, you'll update the pattern using curly brackets instead of the + sy
 Then, display the contents of valid_ip_addresses and run the cell to analyze the results. Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 .\
-# Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
+//Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
 ​
 log_file = "eraab 2022-05-10 6:03:41 192.168.152.148 \niuduike 2022-05-09 6:46:40 192.168.22.115 \nsmartell 2022-05-09 19:30:32 192.168.190.178 \narutley 2022-05-12 17:00:59 1923.1689.3.24 \nrjensen 2022-05-11 0:59:26 192.168.213.128 \naestrada 2022-05-09 19:28:12 1924.1680.27.57 \nasundara 2022-05-11 18:38:07 192.168.96.200 \ndkot 2022-05-12 10:52:00 1921.168.1283.75 \nabernard 2022-05-12 23:38:46 19245.168.2345.49 \ncjackson 2022-05-12 19:36:42 192.168.247.153 \njclark 2022-05-10 10:48:02 192.168.174.117 \nalevitsk 2022-05-08 12:09:10 192.16874.1390.176 \njrafael 2022-05-10 22:40:01 192.168.148.115 \nyappiah 2022-05-12 10:37:22 192.168.103.10654 \ndaquino 2022-05-08 7:02:35 192.168.168.144"
 ​
-# Assign `pattern` to a regular expression that matches with all valid IP addresses and only those
+//Assign `pattern` to a regular expression that matches with all valid IP addresses and only those
 ​
 pattern = "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
 ​
-# Use `re.findall()` on `pattern` and `log_file` and assign `valid_ip_addresses` to the output
+//Use `re.findall()` on `pattern` and `log_file` and assign `valid_ip_addresses` to the output
 ​
 valid_ip_addresses = re.findall(pattern,log_file)
 ​
-# Display the contents of `valid_ip_addresses`
+//Display the contents of `valid_ip_addresses`
 ​
 print(valid_ip_addresses)
 ['192.168.152.148', '192.168.22.115', '192.168.190.178', '192.168.213.128', '192.168.96.200', '192.168.247.153', '192.168.174.117', '192.168.148.115', '192.168.103.106', '192.168.168.144']
@@ -201,11 +201,11 @@ You're given a list of IP addresses that have been previously flagged for unusua
 Display this list and examine what it contains by running the cell. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 ed_addresses
-# Assign `flagged_addresses` to a list of IP addresses that have been previously flagged for unusual activity
+//Assign `flagged_addresses` to a list of IP addresses that have been previously flagged for unusual activity
 ​
 flagged_addresses = ["192.168.190.178", "192.168.96.200", "192.168.174.117", "192.168.168.144"]
 ​
-# Display the contents of `flagged_addresses`
+//Display the contents of `flagged_addresses`
 ​
 print(flagged_addresses)
 
@@ -215,24 +215,24 @@ print(flagged_addresses)
 Task 11
 Finally, you will write an iterative statement that loops through the valid_ip_addresses list and checks if each IP address is flagged. In the following code, the address will be the loop variable. Also, include a conditional that checks if the address belongs to the flagged_addresses list. If so, it should display "The IP address ______ has been flagged for further analysis." If not, it should display "The IP address ______ does not require further analysis." Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
+//Assign `log_file` to a string containing username, date, login time, and IP address for a series of login attempts
 ​
 log_file = "eraab 2022-05-10 6:03:41 192.168.152.148 \niuduike 2022-05-09 6:46:40 192.168.22.115 \nsmartell 2022-05-09 19:30:32 192.168.190.178 \narutley 2022-05-12 17:00:59 1923.1689.3.24 \nrjensen 2022-05-11 0:59:26 192.168.213.128 \naestrada 2022-05-09 19:28:12 1924.1680.27.57 \nasundara 2022-05-11 18:38:07 192.168.96.200 \ndkot 2022-05-12 10:52:00 1921.168.1283.75 \nabernard 2022-05-12 23:38:46 19245.168.2345.49 \ncjackson 2022-05-12 19:36:42 192.168.247.153 \njclark 2022-05-10 10:48:02 192.168.174.117 \nalevitsk 2022-05-08 12:09:10 192.16874.1390.176 \njrafael 2022-05-10 22:40:01 192.168.148.115 \nyappiah 2022-05-12 10:37:22 192.168.103.10654 \ndaquino 2022-05-08 7:02:35 192.168.168.144"
 ​
-# Assign `pattern` to a regular expression that matches with all valid IP addresses and only those
+//Assign `pattern` to a regular expression that matches with all valid IP addresses and only those
 ​
 pattern = "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
 ​
-# Use `re.findall()` on `pattern` and `log_file` and assign `valid_ip_addresses` to the output
+//Use `re.findall()` on `pattern` and `log_file` and assign `valid_ip_addresses` to the output
 ​
 valid_ip_addresses = re.findall(pattern, log_file)
 ​
-# Assign `flagged_addresses` to a list of IP addresses that have been previously flagged for unusual activity
+//Assign `flagged_addresses` to a list of IP addresses that have been previously flagged for unusual activity
 ​
 flagged_addresses = ["192.168.190.178", "192.168.96.200", "192.168.174.117", "192.168.168.144"]
 ​
-# Iterative statement begins here
-# Loop through `valid_ip_addresses` with `address` as the loop variable
+//Iterative statement begins here
+//Loop through `valid_ip_addresses` with `address` as the loop variable
 ​
 for address in valid_ip_addresses:
 ​
