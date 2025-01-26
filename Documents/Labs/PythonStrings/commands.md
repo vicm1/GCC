@@ -3,19 +3,19 @@ In your organization, employee IDs are currently either four digits or five digi
 
 Complete the following code. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `employee_id` to a four digit number as an initial value
+//Assign `employee_id` to a four digit number as an initial value
 ​
 employee_id = 4186
 ​
-# Display the data type of `employee_id`
+//Display the data type of `employee_id`
 ​
 print(type(employee_id))
 ​
-# Reassign `employee_id` to the same value but in the form of a string
+//Reassign `employee_id` to the same value but in the form of a string
 ​
 employee_id = str(4186)
 ​
-# Display the data type of `employee_id` now
+//Display the data type of `employee_id` now
 ​
 print(type(employee_id))
 ​
@@ -35,15 +35,15 @@ In this task, you will write a conditional statement that displays a message if 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 len
-# Assign `employee_id` to a four digit number as an initial value
+//Assign `employee_id` to a four digit number as an initial value
 ​
 employee_id = 4186
 ​
-# Reassign `employee_id` to the same value but in the form of a string
+//Reassign `employee_id` to the same value but in the form of a string
 ​
 employee_id = str(employee_id)
 ​
-# Conditional statement that displays a message if the length of `employee_id` is less than five digits
+//Conditional statement that displays a message if the length of `employee_id` is less than five digits
 ​
 if len(employee_id) < 5:
     print("This employee ID has less than five digits. It does not meet length requirements.")
@@ -58,24 +58,24 @@ Concatenation is a process that allows you to merge strings together. The additi
 Write an if statement that evaluates whether the length of employee_id is less than 5. When the condition evaluates to True, reassign employee_id by concatenating "E" in front of the four-digit employee ID to create a five character employee ID. Then, display employee_id again. Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 "E" +
-# Assign `employee_id` to a four digit number as an initial value
+//Assign `employee_id` to a four digit number as an initial value
 ​
 employee_id = 4186
 ​
-# Reassign `employee_id` to the same value but in the form of a string
+//Reassign `employee_id` to the same value but in the form of a string
 ​
 employee_id = str(employee_id)
 ​
-# Display the `employee_id` as it currently stands
+//Display the `employee_id` as it currently stands
 ​
 print(employee_id)
 ​
-# Conditional statement that updates the `employee_id` if its length is less than 5 digits
+//Conditional statement that updates the `employee_id` if its length is less than 5 digits
 ​
 if len(employee_id) < 5:
     employee_id = "E" + employee_id
 
-# Display the `employee_id` after the update
+//Display the `employee_id` after the update
 
 print(employee_id)
 ​
@@ -90,11 +90,11 @@ The variable device_id represents a device ID containing alphanumeric characters
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 2
-# Assign `device_id` to a string that contains alphanumeric characters
+//Assign `device_id` to a string that contains alphanumeric characters
 ​
 device_id = "r262c36"
 ​
-# Extract the fourth character in `device_id` and display it
+//Extract the fourth character in `device_id` and display it
 ​
 print(device_id[3])
 
@@ -106,11 +106,11 @@ Now you will also need to extract the first through the third characters in the 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 3
-# Assign `device_id` to a string that contains alphanumeric characters
+//Assign `device_id` to a string that contains alphanumeric characters
 ​
 device_id = "r262c36"
 ​
-# Extract the first through the third characters in `device_id` and display the result
+//Extract the first through the third characters in `device_id` and display the result
 ​
 print(device_id[0:3])
 
@@ -124,11 +124,11 @@ You'll work with string indices to display various components of a URL that's st
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 8
-# Assign `url` to a specific URL
+//Assign `url` to a specific URL
 ​
 url = "https://exampleURL1.com"
 ​
-# Extract the protocol of `url` along with the syntax following it, display the result
+//Extract the protocol of `url` along with the syntax following it, display the result
 ​
 print(url[0:8])
 ​
@@ -139,11 +139,11 @@ Later in this lab, you'll extract the domain extension. To prepare for this, use
 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `url` to a specific URL
+//Assign `url` to a specific URL
 ​
 url = "https://exampleURL1.com"
 ​
-# Display the index where the domain extension ".com" is located in `url`
+//Display the index where the domain extension ".com" is located in `url`
 ​
 print(url.index(".com"))
 
@@ -154,11 +154,11 @@ It's a good idea to save important data in variables when programming. This allo
 
 Store the output of the .index() method in a variable called ind, which is short for index. This index represents the position where the domain extension ".com" starts in the url. Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell. Note that running this cell will not produce an output.
 
-# Assign `url` to a specific URL
+//Assign `url` to a specific URL
 ​
 url = "https://exampleURL1.com"
 ​
-# Assign `ind` to the output of applying `.index()` to `url` in order to extract the starting index of ".com" in `url`
+//Assign `ind` to the output of applying `.index()` to `url` in order to extract the starting index of ".com" in `url`
 ​
 ind = url.index(".com")
 ​
@@ -166,15 +166,15 @@ ind = url.index(".com")
 Task 9
 You can use string slicing to also extract the domain extension of a URL. To do so, you can create a slice. The starting index should be the ind variable. This contains the index where the domain extension begins. The ending index should be ind + 4 (since ".com" is four characters long). Sometimes, like in this situation, it's easier to express the ending index in relation to the starting index. Examine the following code, run it as is, and observe the output.
 
-# Assign `url` to a specific URL
+//Assign `url` to a specific URL
 ​
 url = "https://exampleURL1.com"
 ​
-# Assign `ind` to the output of applying `.index()` to `url` in order to extract the starting index of ".com" in `url`
+//Assign `ind` to the output of applying `.index()` to `url` in order to extract the starting index of ".com" in `url`
 ​
 ind = url.index(".com")
 ​
-# Extract the domain extension in `url` and display it
+//Extract the domain extension in `url` and display it
 ​
 print(url[ind:ind+4])
 ​
@@ -188,15 +188,15 @@ Question 2
 Task 10
 Finally, extract the website name from the given URL using string slicing and the ind variable that you defined earlier. In the given URL, the website name is "exampleURL1". Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `url` to a specific URL
+//Assign `url` to a specific URL
 ​
 url = "https://exampleURL1.com"
 ​
-# Assign `ind` to the output of applying `.index()` to `url` in order to extract the starting index of ".com" in `url`
+//Assign `ind` to the output of applying `.index()` to `url` in order to extract the starting index of ".com" in `url`
 ​
 ind = url.index(".com")
 ​
-# Extract the website name in `url` and display it
+//Extract the website name in `url` and display it
 ​
 print(url[8:ind])
 
