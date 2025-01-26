@@ -29,8 +29,8 @@ Task 3
 Writing code comments is a way to document the intention behind code. It's a standard that analysts commonly use in their workflow. Writing comments that accompany code allows you to keep track of the technical decisions you've made in your project. This makes it easier for you and your team to read and revisit your code in order to understand what it does and why you took certain approaches.
 
 For this task, run the following code cell as is and observe the output.
-"In Python, comments do not get displayed
-"This code cell contains only comments
+"#In Python, comments do not get displayed
+"#This code cell contains only comments
 
 
 Question 2
@@ -43,7 +43,7 @@ To type in a code cell, first click into the cell. Then you can write comments a
 
 For this task, add a comment at the beginning of the following code cell, describing what the code is doing. Write the comment to say # This cell displays "I am using Python.". Be sure to replace the # YOUR COMMENT HERE with your own comment before running the following cell.
 
-"This cell displays "I am using Python."
+"#This cell displays "I am using Python."
 
 Task 5
 In Python, print() helps you to display information to the screen.
