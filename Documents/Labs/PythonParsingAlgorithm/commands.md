@@ -7,34 +7,34 @@ There are IP addresses that should no longer have access to this information, an
 
 Display both variables to explore their contents, and run the cell. Be sure to replace each ### YOUR CODE HERE ### with your own code before running the following cell.
 
-# Assign `import_file` to the name of the file
+"# Assign `import_file` to the name of the file
 
 import_file = "allow_list.txt"
 
-# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
+"# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
 
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 
-# Display `import_file`
+"# Display `import_file`
 
 print(import_file)
 
-# Display `remove_list`
+"# Display `remove_list`
 
 print(remove_list)
-# Assign `import_file` to the name of the file
+"# Assign `import_file` to the name of the file
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
+"# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
 ​
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 ​
-# Display `import_file`
+"# Display `import_file`
 ​
 print(import_file)
 ​
-# Display `remove_list`
+"# Display `remove_list`
 ​
 print(remove_list)
 
@@ -51,15 +51,15 @@ In this task, start by opening the text file using the import_file variable, the
 
 For now, you'll write the first line of the with statement. Running this code will produce an error because it will only contain the first line of the with statement; you'll complete this with statement in the task after this.
 
-# Assign `import_file` to the name of the file
+"# Assign `import_file` to the name of the file
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
+"# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
 ​
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 ​
-# First line of `with` statement
+"# First line of `with` statement
 ​
 with open(import_file, "r") as file:
 
@@ -78,23 +78,23 @@ Afterwards, display ip_addresses to examine the data in its current format.
 Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 ip_addresses
-# Assign `import_file` to the name of the file
+"# Assign `import_file` to the name of the file
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
+"# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
 ​
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 ​
-# Build `with` statement to read in the initial contents of the file
+"# Build `with` statement to read in the initial contents of the file
 ​
 with open(import_file, "r") as file:
 ​
-  # Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
+  "# Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
 ​
   ip_addresses = file.read()
 ​
-# Display `ip_addresses`
+"# Display `ip_addresses`
 ​
 print(ip_addresses)
 
@@ -130,27 +130,27 @@ Afterwards, display the ip_addresses variable to verify that the update took pla
 Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 ip_addresses
-# Assign `import_file` to the name of the file
+"# Assign `import_file` to the name of the file
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
+"# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
 ​
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 ​
-# Build `with` statement to read in the initial contents of the file
+"# Build `with` statement to read in the initial contents of the file
 ​
 with open(import_file, "r") as file:
 ​
-  # Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
+  "# Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
 ​
   ip_addresses = file.read()
 ​
-# Use `.split()` to convert `ip_addresses` from a string to a list
+"# Use `.split()` to convert `ip_addresses` from a string to a list
 ​
 ip_addresses = ip_addresses.split()
 ​
-# Display `ip_addresses`
+"# Display `ip_addresses`
 ​
 print(ip_addresses)
 
@@ -161,29 +161,29 @@ Now, you'll write code that removes the elements of remove_list from the ip_addr
 
 First, build the iterative statement. Name the loop variable element, loop through ip_addresses, and display each element. Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Assign `import_file` to the name of the file
+"# Assign `import_file` to the name of the file
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
+"# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
 ​
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 ​
-# Build `with` statement to read in the initial contents of the file
+"# Build `with` statement to read in the initial contents of the file
 ​
 with open(import_file, "r") as file:
 ​
-  # Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
+  "# Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
 ​
   ip_addresses = file.read()
 ​
-# Use `.split()` to convert `ip_addresses` from a string to a list
+"# Use `.split()` to convert `ip_addresses` from a string to a list
 ​
 ip_addresses = ip_addresses.split()
 ​
-# Build iterative statement
-# Name loop variable `element`
-# Loop through `ip_addresses`
+"# Build iterative statement
+"# Name loop variable `element`
+"# Loop through `ip_addresses`
 ​
 for element in ip_addresses:
 ​
@@ -216,34 +216,34 @@ Now, build a conditional statement to remove the elements of remove_list from th
 Afterwards, display the updated ip_addresses list to verify that the elements of remove_list are no longer in the ip_addresses. Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 element =
-# Assign `import_file` to the name of the file
+"# Assign `import_file` to the name of the file
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
+"# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
 ​
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 ​
-# Build `with` statement to read in the initial contents of the file
+"# Build `with` statement to read in the initial contents of the file
 ​
 with open(import_file, "r") as file:
 ​
-  # Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
+  "# Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
 ​
   ip_addresses = file.read()
 ​
-# Use `.split()` to convert `ip_addresses` from a string to a list
+"# Use `.split()` to convert `ip_addresses` from a string to a list
 ​
 ip_addresses = ip_addresses.split()
 ​
-# Build iterative statement
-# Name loop variable `element`
-# Loop through `ip_addresses`
+"# Build iterative statement
+"# Name loop variable `element`
+"# Loop through `ip_addresses`
 ​
 for element in ip_addresses:
 
-  # Build conditional statement
-  # If current element is in `remove_list`,
+  "# Build conditional statement
+  "# If current element is in `remove_list`,
 
     if element in remove_list:
 ​
@@ -251,7 +251,7 @@ for element in ip_addresses:
 ​
         element = ip_addresses.remove(element)
 ​
-# Display `ip_addresses`
+"# Display `ip_addresses`
 ​
 print(ip_addresses)
 
@@ -265,34 +265,34 @@ The .join() method takes in an iterable (such as a list) and concatenates every 
 After this line with the .join() method, build the with statement that rewrites the original file. Use the "w" parameter when calling the open() function to delete the contents in the original file and replace it with what you want to write. Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell. This code cell will not produce an output.
 
 ip_addresses
-# Assign `import_file` to the name of the file
+"# Assign `import_file` to the name of the file
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
+"# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
 ​
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 ​
-# Build `with` statement to read in the initial contents of the file
+"# Build `with` statement to read in the initial contents of the file
 ​
 with open(import_file, "r") as file:
 ​
-  # Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
+  "# Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
 ​
   ip_addresses = file.read()
 ​
-# Use `.split()` to convert `ip_addresses` from a string to a list
+"# Use `.split()` to convert `ip_addresses` from a string to a list
 ​
 ip_addresses = ip_addresses.split()
 ​
-# Build iterative statement
-# Name loop variable `element`
-# Loop through `ip_addresses`
+"# Build iterative statement
+"# Name loop variable `element`
+"# Loop through `ip_addresses`
 ​
 for element in ip_addresses:
 
-  # Build conditional statement
-  # If current element is in `remove_list`,
+  "# Build conditional statement
+  "# If current element is in `remove_list`,
 
     if element in remove_list:
 ​
@@ -300,16 +300,16 @@ for element in ip_addresses:
 ​
         ip_addresses.remove(element)
 ​
-# Convert `ip_addresses` back to a string so that it can be written into the text file
+"# Convert `ip_addresses` back to a string so that it can be written into the text file
 ​
 ip_addresses = " ".join(ip_addresses)    
 ​
-# Build `with` statement to rewrite the original file
+"# Build `with` statement to rewrite the original file
 ​
 with open (import_file, "w") as file:
 
 ​
-  # Rewrite the file, replacing its contents with `ip_addresses`
+  "# Rewrite the file, replacing its contents with `ip_addresses`
 ​
   file.write(ip_addresses)
 
@@ -323,34 +323,34 @@ Afterwards, display the text variable to examine the result.
 Be sure to replace each ### YOUR CODE HERE ### with your own code before you run the following cell.
 
 text
-# Assign `import_file` to the name of the file
+"# Assign `import_file` to the name of the file
 ​
 import_file = "allow_list.txt"
 ​
-# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
+"# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information.
 ​
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 ​
-# Build `with` statement to read in the initial contents of the file
+"# Build `with` statement to read in the initial contents of the file
 ​
 with open(import_file, "r") as file:
 ​
-  # Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
+  "# Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
 ​
   ip_addresses = file.read()
 ​
-# Use `.split()` to convert `ip_addresses` from a string to a list
+"# Use `.split()` to convert `ip_addresses` from a string to a list
 ​
 ip_addresses = ip_addresses.split()
 ​
-# Build iterative statement
-# Name loop variable `element`
-# Loop through `ip_addresses`
+"# Build iterative statement
+"# Name loop variable `element`
+"# Loop through `ip_addresses`
 ​
 for element in ip_addresses:
 
-  # Build conditional statement
-  # If current element is in `remove_list`,
+  "# Build conditional statement
+  "# If current element is in `remove_list`,
 
     if element in remove_list:
 ​
@@ -358,19 +358,19 @@ for element in ip_addresses:
 ​
         ip_addresses.remove(element)
 ​
-# Convert `ip_addresses` back to a string so that it can be written into the text file
+"# Convert `ip_addresses` back to a string so that it can be written into the text file
 ​
 ip_addresses = " ".join(ip_addresses)       
 ​
-# Build `with` statement to rewrite the original file
+"# Build `with` statement to rewrite the original file
 ​
 with open(import_file, "w") as file:
 ​
-  # Rewrite the file, replacing its contents with `ip_addresses`
+  "# Rewrite the file, replacing its contents with `ip_addresses`
 ​
   file.write(ip_addresses)
 ​
-# Build `with` statement to read in the updated file
+"# Build `with` statement to read in the updated file
 ​
 with open(import_file, "r") as file:
 ​
@@ -378,7 +378,7 @@ with open(import_file, "r") as file:
 ​
     text = file.read()
 ​
-# Display the contents of `text`
+"# Display the contents of `text`
 ​
 print(text)
 
@@ -392,8 +392,8 @@ Define a function named update_file() that takes in two parameters. The first pa
 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell. Note that this code cell will not produce an output.
 
-# Define a function named `update_file` that takes in two parameters: `import_file` and `remove_list`
-# and combines the steps you've written in this lab leading up to this
+"# Define a function named `update_file` that takes in two parameters: `import_file` and `remove_list`
+"# and combines the steps you've written in this lab leading up to this
 ​
 def update_file(import_file, remove_list):
 ​
@@ -452,26 +452,26 @@ After the function call, use a with statement to read the contents of the allow 
 
 Be sure to replace the ### YOUR CODE HERE ### with your own code before you run the following cell.
 
-# Define a function named `update_file` that takes in two parameters: `import_file` and `remove_list`
-# and combines the steps you've written in this lab leading up to this
+"# Define a function named `update_file` that takes in two parameters: `import_file` and `remove_list`
+"# and combines the steps you've written in this lab leading up to this
 ​
 def update_file(import_file, remove_list):
 ​
-  # Build `with` statement to read in the initial contents of the file
+  "# Build `with` statement to read in the initial contents of the file
 ​
   with open(import_file, "r") as file:
 ​
-    # Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
+    "# Use `.read()` to read the imported file and store it in a variable named `ip_addresses`
 ​
     ip_addresses = file.read()
 ​
-  # Use `.split()` to convert `ip_addresses` from a string to a list
+  "# Use `.split()` to convert `ip_addresses` from a string to a list
 ​
   ip_addresses = ip_addresses.split()
 ​
-  # Build iterative statement
-  # Name loop variable `element`
-  # Loop through `ip_addresses`
+  "# Build iterative statement
+  "# Name loop variable `element`
+  "# Loop through `ip_addresses`
 ​
   for element in ip_addresses:
 
@@ -484,11 +484,11 @@ def update_file(import_file, remove_list):
 ​
       ip_addresses.remove(element)
 ​
-  # Convert `ip_addresses` back to a string so that it can be written into the text file
+  "# Convert `ip_addresses` back to a string so that it can be written into the text file
 ​
   ip_addresses = " ".join(ip_addresses)       
 ​
-  # Build `with` statement to rewrite the original file
+  "# Build `with` statement to rewrite the original file
 ​
   with open(import_file, "w") as file:
 ​
@@ -496,19 +496,19 @@ def update_file(import_file, remove_list):
 ​
     file.write(ip_addresses)
 ​
-# Call `update_file()` and pass in "allow_list.txt" and a list of IP addresses to be removed
+"# Call `update_file()` and pass in "allow_list.txt" and a list of IP addresses to be removed
 ​
 update_file("allow_list.txt", ["192.168.25.60", "192.168.140.81", "192.168.203.198"])
 ​
-# Build `with` statement to read in the updated file
+"# Build `with` statement to read in the updated file
 ​
 with open("allow_list.txt", "r") as file:
 ​
-  # Read in the updated file and store the contents in `text`
+  "# Read in the updated file and store the contents in `text`
 ​
   text = file.read()
 ​
-# Display the contents of `text`
+"# Display the contents of `text`
 ​
 print(text)
 
